@@ -1,0 +1,5 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- digest: sha256:ebabdb78839f1be645a5d3206195895e6738f86cf1df5d8a6e466bf394053887
+  name: quay.io/megacamelus/qdrant-operator
