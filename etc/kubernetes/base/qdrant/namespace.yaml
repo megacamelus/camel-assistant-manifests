@@ -4,4 +4,4 @@ kind: Namespace
 metadata:  
   name: qdrant-system
   labels:
-    argocd.argoproj.io/managed-by: camel-ai
+    argocd.argoproj.io/managed-by: openshift-gitops
