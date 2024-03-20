@@ -3,7 +3,9 @@ kind: Kustomization
 
 resources:
 - backend.yaml
+- frontend.yaml
 - qdrant.yaml
+
 namespace: camel-ai
 images:
 - digest: sha256:7a30cfec0dded20b5149e006f89d734b47efd8e3872d614de87c8d38965c226e

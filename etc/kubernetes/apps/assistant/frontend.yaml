@@ -1,0 +1,48 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/name: assistant-frontend
+  name: assistant-frontend
+spec:
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 8081
+  selector:
+    app.kubernetes.io/name: assistant-frontend
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: assistant-frontend
+  name: assistant-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: assistant-frontend
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: assistant-frontend
+    spec:
+      containers:
+        - env:
+            - name: KUBERNETES_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: ASSISTANT_BACKEND_URL
+              value: "http://assistant-backend:80/api/hello"
+          image: quay.io/megacamelus/assistant-ui-vaadin:latest
+          imagePullPolicy: Always
+          name: assistant-frontend
+          ports:
+            - containerPort: 8081
+              name: http
+              protocol: TCP
