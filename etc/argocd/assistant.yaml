@@ -4,6 +4,7 @@ metadata:
   name: camel-ai-assistant
   namespace: openshift-gitops
 spec:
+  project: default
   destination:
     namespace: camel-ai
     server: 'https://kubernetes.default.svc'
