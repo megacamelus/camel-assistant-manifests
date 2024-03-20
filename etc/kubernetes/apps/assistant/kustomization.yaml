@@ -6,5 +6,5 @@ resources:
 - qdrant.yaml
 namespace: camel-ai
 images:
-- digest: sha256:c8d7ea6b97103efdbb9662fd224e77d0e675c70d92ff898c38344221668d5231
+- digest: sha256:4ed32a301f4d45cf5caa23911016133952a2312f572292538e51306ba8eb4902
   name: quay.io/megacamelus/assistant-backend
