@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: camel-ai-system
+  name: camel-ai-infra
   namespace: openshift-gitops
 spec:
   destination:
