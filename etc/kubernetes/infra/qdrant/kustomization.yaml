@@ -2,11 +2,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - namespace.yaml
-  - https://github.com/megacamelus/qdrant-operator//config/default
+- namespace.yaml
+- https://github.com/megacamelus/qdrant-operator//config/default
 
 namespace: camel-ai
 
 images:
-- digest: sha256:38c86fd649ff93c1b2eb7325347be9d17993d746be531b0e88a65e9c11dc9129
+- digest: sha256:adb4c55240e1dd82634f43ff333836a9dad32b0116ffd09ae2a06c8981933e5c
   name: quay.io/megacamelus/qdrant-operator
