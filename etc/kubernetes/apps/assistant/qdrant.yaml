@@ -1,0 +1,18 @@
+---
+apiVersion: qdrant.megacamelus.github.io/v1alpha1
+kind: Cluster
+metadata:
+  name: camel-ai
+spec: {}
+---
+apiVersion: qdrant.megacamelus.github.io/v1alpha1
+kind: Collection
+metadata:
+  name: cai
+spec:
+  cluster: "camel-ai"
+  vectorParams:
+    size: 384
+    distance: "Cosine"
+
+
