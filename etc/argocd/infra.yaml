@@ -5,10 +5,10 @@ metadata:
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: camel-ai
+    namespace: qdrant-system
     server: 'https://kubernetes.default.svc'
   source:
-    path: etc/kubernetes/base/qdrant
+    path: etc/kubernetes/infra/qdrant
     repoURL: 'https://github.com/megacamelus/camel-assistant-manifests'
     targetRevision: HEAD
   syncPolicy:
