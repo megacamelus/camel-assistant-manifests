@@ -9,7 +9,7 @@ spec:
     namespace: camel-ai
     server: 'https://kubernetes.default.svc'
   source:
-    path: etc/kubernetes/infra/qdrant
+    path: etc/kubernetes/infra
     repoURL: 'https://github.com/megacamelus/camel-assistant-manifests'
     targetRevision: HEAD
   syncPolicy:
