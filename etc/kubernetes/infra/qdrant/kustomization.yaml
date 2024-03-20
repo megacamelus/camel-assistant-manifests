@@ -5,7 +5,7 @@ resources:
   - namespace.yaml
   - https://github.com/megacamelus/qdrant-operator//config/default
 
-namespace: qdrant-ai
+namespace: camel-ai
 
 images:
 - digest: sha256:38c86fd649ff93c1b2eb7325347be9d17993d746be531b0e88a65e9c11dc9129
