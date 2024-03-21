@@ -37,11 +37,11 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.namespace
-            - name: QDRANT_HOST
+            - name: CAMEL_ASSISTANT_QDRANT_HOST
               value: "camel-ai"
-            - name: QDRANT_GRPC_PORT
+            - name: CAMEL_ASSISTANT_QDRANT_PORT
               value: "6334"
-            - name: QDRANT_COLLECTION_NAME
+            - name: CAMEL_ASSISTANT_QDRANT_COLLECTION_NAME
               value: cai
           image: quay.io/megacamelus/assistant-backend:latest
           imagePullPolicy: Always
