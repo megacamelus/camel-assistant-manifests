@@ -8,7 +8,7 @@ resources:
 
 namespace: camel-ai
 images:
-- digest: sha256:235bc3adf891773f60a52f6763aa3bf864ef976c3f5560d63bb5f768d55153ff
+- digest: sha256:8d76b495c3014a2be7902d48c10f61247985ae2bf5448ee75f133b2294589089
   name: quay.io/megacamelus/assistant-backend
-- digest: sha256:c8463e2f18f77bc2640de5026d176e5505ba9662e3fb4b5cb58930f5fd387f83
+- digest: sha256:65e79d12530216b862af47316be4ef8c2c2380b6d9d38c872e33b63c3ad6e66b
   name: quay.io/megacamelus/assistant-ui-vaadin
