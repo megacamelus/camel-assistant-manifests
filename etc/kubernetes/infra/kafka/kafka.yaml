@@ -29,5 +29,6 @@ spec:
   zookeeper:
     replicas: 3
     storage:
-      class: 5Gi
+      deleteClaim: true
+      size: 5Gi
       type: persistent-claim
