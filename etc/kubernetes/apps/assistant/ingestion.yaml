@@ -4,3 +4,6 @@ metadata:
   name: camel-ai-ingestion
   labels:
     strimzi.io/cluster: camel-ai-kafka
+spec:
+  partitions: 1
+  replicas: 1
