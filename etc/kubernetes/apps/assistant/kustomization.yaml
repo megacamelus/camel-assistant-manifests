@@ -5,6 +5,7 @@ resources:
 - backend.yaml
 - frontend.yaml
 - qdrant.yaml
+- ingestion.yaml
 
 namespace: camel-ai
 images:
