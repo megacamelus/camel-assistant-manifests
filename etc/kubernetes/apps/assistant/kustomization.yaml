@@ -5,7 +5,8 @@ resources:
 - backend.yaml
 - frontend.yaml
 - qdrant.yaml
-- ingestion.yaml
+- ingestion-sink-topic.yaml
+- ingestion-sink-pipe.yaml
 
 namespace: camel-ai
 images:
