@@ -13,8 +13,6 @@ spec:
       kind: KafkaTopic
       apiVersion: kafka.strimzi.io/v1beta2
       name: camel-ai-ingestion
-    properties:
-      brokers: 'camel-ai-kafka-kafka-bootstrap.camel-ai.svc:9092'
   steps:
     - ref:
         kind: Kamelet
