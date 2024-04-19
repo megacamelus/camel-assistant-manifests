@@ -19,7 +19,7 @@ metadata:
       trait.camel.apache.org/jvm.enabled: 'false'
       trait.camel.apache.org/kamelets.enabled: 'false'
       trait.camel.apache.org/dependencies.enabled: 'false'
-      trait.camel.apache.org/mount.volumes: 'camel-ai-ingestion-sink:/camel/assistant'
+      trait.camel.apache.org/mount.volumes: 'camel-ai-ingestion-sink:/camel-assistant'
 spec:
   source:
     ref:
