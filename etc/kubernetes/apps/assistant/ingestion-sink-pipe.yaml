@@ -1,12 +1,25 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: camel-ai-ingestion-sink
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
 apiVersion: camel.apache.org/v1
 kind: Pipe
 metadata:
-  name: camel-ai-ingestion-siknk
+  name: camel-ai-ingestion-sink
   annotations:
       trait.camel.apache.org/container.image: 'quay.io/megacamelus/assistant-ingestion-sink:latest'
       trait.camel.apache.org/jvm.enabled: 'false'
       trait.camel.apache.org/kamelets.enabled: 'false'
       trait.camel.apache.org/dependencies.enabled: 'false'
+      trait.camel.apache.org/mount.volumes: 'camel-ai-ingestion-sink:/camel/assistant'
 spec:
   source:
     ref:
@@ -21,7 +34,7 @@ spec:
         apiVersion: camel.apache.org/v1
         name: langchain-embeddings-action
       properties:
-        embeddingId: 'camel-ai-ingestion-siknk'
+        embeddingId: 'camel-ai-ingestion-sink'
   sink:
     ref:
       kind: Kamelet
