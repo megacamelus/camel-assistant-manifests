@@ -16,6 +16,7 @@ metadata:
   name: camel-ai-ingestion-sink
   annotations:
       trait.camel.apache.org/container.image: 'quay.io/megacamelus/assistant-ingestion-sink:latest'
+      trait.camel.apache.org/container.image-pull-policy: 'Always'
       trait.camel.apache.org/jvm.enabled: 'false'
       trait.camel.apache.org/kamelets.enabled: 'false'
       trait.camel.apache.org/dependencies.enabled: 'false'
