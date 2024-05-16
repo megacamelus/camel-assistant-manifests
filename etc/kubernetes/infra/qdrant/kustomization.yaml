@@ -5,5 +5,5 @@ resources:
 - https://github.com/megacamelus/qdrant-operator//config/default
 
 images:
-- digest: sha256:218d5cae9da56d3734ee6223dcc5005ac4d7a6ca38e9df50469677c6d547e86c
+- digest: sha256:ad24adab5b4204b089a73e478d9711ebf61bb234f13057c21f4e148c91223524
   name: quay.io/megacamelus/qdrant-operator
